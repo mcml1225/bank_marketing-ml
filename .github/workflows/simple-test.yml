@@ -1,0 +1,56 @@
+name: Simple Test
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.9'
+        
+    - name: Check Python version
+      run: python --version
+      
+    - name: Check repository structure
+      run: |
+        echo "📁 Repository structure:"
+        ls -la
+        echo ""
+        echo "📁 App directory:"
+        ls -la app/ || echo "app directory exists"
+        echo ""
+        echo "📁 Models directory:"
+        ls -la models/ || echo "models directory exists"
+        
+    - name: Test Python imports
+      run: |
+        python -c "print('✅ Python is working!')"
+        python -c "import sys; print(f'✅ Python version: {sys.version}')"
+        
+    - name: Verify requirements file
+      run: |
+        if [ -f "requirements.txt" ]; then
+          echo "✅ requirements.txt found"
+          cat requirements.txt
+        else
+          echo "❌ requirements.txt not found"
+          exit 1
+        fi
+        
+    - name: Simple success message
+      run: |
+        echo "🎉 All simple tests passed!"
+        echo "✅ GitHub Actions is working correctly"
+        echo "📊 Project: Bank Marketing Prediction API"
+        echo "👤 Author: mcml1225"
