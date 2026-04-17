@@ -1,0 +1,67 @@
+# Software Requirements Specification (SRS)
+## Project: Bank Marketing Prediction API
+
+### 1. Introduction
+
+#### 1.1 Purpose
+This document specifies the functional and non-functional requirements for a Machine Learning-based system that predicts customer subscription to term deposits.
+
+#### 1.2 Scope
+The system enables banking institutions to predict the probability of a customer accepting a term deposit offer based on demographic, financial, and campaign data.
+
+#### 1.3 Definitions and Acronyms
+- **API**: Application Programming Interface
+- **ML**: Machine Learning
+- **CI/CD**: Continuous Integration/Continuous Deployment
+- **ROC**: Receiver Operating Characteristic
+- **SRS**: Software Requirements Specification
+
+### 2. Functional Requirements
+
+| ID | Requirement | Priority |
+|----|-------------|----------|
+| FR-01 | System must receive customer data via HTTP POST | High |
+| FR-02 | System must return binary prediction (Yes/No) | High |
+| FR-03 | System must return prediction probability | High |
+| FR-04 | System must have health check endpoint (/health) | Medium |
+| FR-05 | System must auto-generate API documentation | Medium |
+| FR-06 | System must retrain automatically with new data | Low |
+
+### 3. Non-Functional Requirements
+
+| ID | Requirement | Metric |
+|----|-------------|--------|
+| NFR-01 | Response time | < 500ms |
+| NFR-02 | Availability | 99.9% |
+| NFR-03 | Model accuracy | > 85% |
+| NFR-04 | Security | Input validation |
+| NFR-05 | Scalability | Docker containerized |
+
+### 4. Use Cases
+
+#### UC-01: Successful Prediction
+- **Actor**: External system / User
+- **Precondition**: API is operational
+- **Main Flow**:
+  1. User sends POST to /predict with JSON data
+  2. System validates input data
+  3. System loads trained model
+  4. System returns prediction and probability
+- **Postcondition**: Prediction is returned
+
+#### UC-02: Validation Error
+- **Actor**: External system
+- **Precondition**: Invalid data provided
+- **Flow**: System returns 400 error with description
+
+### 5. Constraints
+- Python 3.9+
+- Minimum RAM: 2GB
+- Storage: 500MB for model
+- Internet connection for initial training
+
+### 6. Stakeholders
+- Banking marketing team
+- Software developers
+- Data scientists
+- End users

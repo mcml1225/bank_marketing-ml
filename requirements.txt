@@ -4,3 +4,7 @@ pandas
 scikit-learn
 joblib
 ucimlrepo
+pytest
+pytest-cov
+requests
+httpx
