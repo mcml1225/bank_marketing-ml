@@ -5,6 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/mcml1225/bank_marketing-ml)
 [![GitHub last commit](https://img.shields.io/github/last-commit/mcml1225/bank_marketing-ml.svg)](https://github.com/mcml1225/bank_marketing-ml)
+[![Simple Test](https://github.com/mcml1225/bank_marketing-ml/actions/workflows/simple-test.yml/badge.svg)](https://github.com/mcml1225/bank_marketing-ml/actions/workflows/simple-test.yml)
 
 <!-- Badge de CI/CD aparecerá automáticamente cuando el workflow pase -->
 <!-- [![CI/CD Pipeline](https://github.com/mcml1225/bank_marketing-ml/actions/workflows/deploy.yml/badge.svg)](https://github.com/mcml1225/bank_marketing-ml/actions) -->
