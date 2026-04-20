@@ -194,3 +194,9 @@ FastAPI for the amazing framework
 GitHub Actions for CI/CD
 
 scikit-learn for the ML library
+<<<<<<< Updated upstream
+=======
+
+scikit-learn for the ML library
+
+>>>>>>> Stashed changes
