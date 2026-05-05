@@ -29,6 +29,7 @@ Machine Learning API that predicts whether a bank customer will subscribe to a t
 ---
 
 ## Project Structure
+```
 bank_marketing-ml/
 ├── app/ # API application
 │ ├── main.py # FastAPI endpoints
@@ -51,8 +52,7 @@ bank_marketing-ml/
 ├── Dockerfile
 ├── requirements.txt
 └── README.md
-
-text
+```
 
 ---
 
